@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="프로그래머스_C#_기초_입문\240724\" />
+    <Folder Include="프로그래머스_C#_기초_입문\240725\" />
+  </ItemGroup>
+
 </Project>
