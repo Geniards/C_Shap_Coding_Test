@@ -29,11 +29,11 @@
             return answer;
         }
 
-        static void Main(string[] args)
-        {
-            int[] arr = { 1, 2, 3, 4 };
+        //static void Main(string[] args)
+        //{
+        //    int[] arr = { 1, 2, 3, 4 };
 
-            Console.WriteLine(solution(arr));
-        }
+        //    Console.WriteLine(solution(arr));
+        //}
     }
 }

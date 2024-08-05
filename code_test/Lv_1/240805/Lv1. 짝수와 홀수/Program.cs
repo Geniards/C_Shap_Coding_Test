@@ -29,11 +29,11 @@
             return answer;
         }
 
-        static void Main(string[] args)
-        {
-            int num = 3;
+        //static void Main(string[] args)
+        //{
+        //    int num = 3;
 
-            Console.WriteLine(solution(num));
-        }
+        //    Console.WriteLine(solution(num));
+        //}
     }
 }

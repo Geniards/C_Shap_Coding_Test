@@ -34,12 +34,12 @@
             return answer = list.ToArray();
         }
 
-        static void Main(string[] args)
-        {
-            int x = 2;
-            int n = 5;
+        //static void Main(string[] args)
+        //{
+        //    int x = 2;
+        //    int n = 5;
 
-            Console.WriteLine(solution(x, n));
-        }
+        //    Console.WriteLine(solution(x, n));
+        //}
     }
 }

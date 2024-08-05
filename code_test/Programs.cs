@@ -1,4 +1,10 @@
-﻿namespace Lv1._하샤드_수
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace code_test
 {
     /*
     * 하샤드 수(12947)
@@ -32,12 +38,12 @@
             }
 
             int temp = 0;
-            for (int i = 0; i < list.Count; i ++)
+            for (int i = 0; i < list.Count; i++)
             {
                 temp += list[i];
             }
 
-            if(x % temp == 0)
+            if (x % temp == 0)
                 answer = true;
             else
                 answer = false;

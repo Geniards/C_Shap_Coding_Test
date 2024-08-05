@@ -34,12 +34,12 @@
             return answer = list.ToArray();
         }
 
-        static void Main(string[] args)
-        {
-            int n = 12345;
+        //static void Main(string[] args)
+        //{
+        //    int n = 12345;
 
-            Console.WriteLine(solution(n));
+        //    Console.WriteLine(solution(n));
 
-        }
+        //}
     }
 }

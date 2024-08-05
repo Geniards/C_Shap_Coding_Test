@@ -45,11 +45,11 @@ namespace Lv1._정수_내림차순으로_배치하기
             return answer = long.Parse(sb.ToString());
         }
 
-        static void Main(string[] args)
-        {
-            long n = 118372;
+        //static void Main(string[] args)
+        //{
+        //    long n = 118372;
 
-            Console.WriteLine(solution(n));
-        }
+        //    Console.WriteLine(solution(n));
+        //}
     }
 }

@@ -32,11 +32,11 @@
             return answer;
         }
 
-        static void Main(string[] args)
-        {
-            int n = 121;
+        //static void Main(string[] args)
+        //{
+        //    int n = 121;
 
-            Console.WriteLine(solution(n));
-        }
+        //    Console.WriteLine(solution(n));
+        //}
     }
 }
