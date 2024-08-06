@@ -6,47 +6,71 @@ using System.Threading.Tasks;
 
 namespace code_test
 {
+    #region 겹치는 선분의 길이
+
     /*
-    * 하샤드 수(12947)
-    * 
-    * 문제 설명
-    *      양의 정수 x가 하샤드 수이려면 x의 자릿수의 합으로 x가 나누어져야 합니다. 
-    *      예를 들어 18의 자릿수 합은 1+8=9이고, 
-    *      18은 9로 나누어 떨어지므로 18은 하샤드 수입니다. 
-    *      자연수 x를 입력받아 x가 하샤드 수인지 아닌지 검사하는 함수, 
-    *      solution을 완성해주세요.
-    *      
-    * 제한 조건
-    *      x는 1 이상, 10000 이하인 정수입니다.
-    *          
-    *      
-    * 문제해결
-    *      문자열로 변환 후 다시 int형으로 변환을 했다.
-    */
+     * 문제 설명
+     *      선분 3개가 평행하게 놓여 있습니다. 
+     *      세 선분의 시작과 끝 좌표가 
+     *      [[start, end], [start, end], [start, end]] 형태로 들어있는 
+     *      2차원 배열 lines가 매개변수로 주어질 때, 
+     *      두 개 이상의 선분이 겹치는 부분의 길이를 
+     *      return 하도록 solution 함수를 완성해보세요.
+     *      
+     *      lines가 [[0, 2], [-3, -1], [-2, 1]]일 때 그림으로 나타내면 다음과 같습니다.
+     *      선분이 두 개 이상 겹친 곳은 [-2, -1], [0, 1]로 길이 2만큼 겹쳐있습니다.
+     *      
+     * 제한사항
+     *      lines의 길이 = 3
+     *      lines의 원소의 길이 = 2
+     *      모든 선분은 길이가 1 이상입니다.
+     *      lines의 원소는 [a, b] 형태이며, a, b는 각각 선분의 양 끝점 입니다.
+     *      -100 ≤ a < b ≤ 100
+     *      
+     *      
+     * 문제해결
+     *      배열에서 시작지점과 끝지점의 최소값과 최댓값을 구하고 
+     *      해당 범위안에서 겹치는 부분이 있는지 파악하기.
+     */
+    #endregion
+
     public class Program
     {
-        static public bool solution(int x)
+        static public int solution(int[,] lines)
         {
-            bool answer = true;
+            int answer = 0;
+            int min = lines[0, 0];
+            int max = lines[0, 1];
 
-            string str = new string(x.ToString());
-            List<int> list = new List<int>();
-
-            for (int i = 0; i < str.Length; i++)
+            for (int i = 1; i < lines.GetLength(0); i++)
             {
-                list.Add(int.Parse(str[i].ToString()));
+                for (int j = 0; j < lines.GetLength(1); j++)
+                {
+                    if (min > lines[i,j])
+                        min = lines[i,j];   // 가장 작은 값 == 왼쪽 끝
+                    if (max < lines[i, j])  // 가장 큰 값 == 가장 오른쪽
+                        max = lines[i, j];  
+                }
             }
 
-            int temp = 0;
-            for (int i = 0; i < list.Count; i++)
+            for (int i = min; i < max; i++)
             {
-                temp += list[i];
-            }
+                // 새로 시작할때마다 초기화
+                int temp = 0;
 
-            if (x % temp == 0)
-                answer = true;
-            else
-                answer = false;
+                for (int j = 0; j < lines.GetLength(0); j++)
+                {
+                    // i, i+1 == 1의 길이를 가진 값
+                    // 해당 범위 안에 들어있으면 temp증가
+                    if (lines[j, 0] <= i && i + 1 <= lines[j, 1])
+                        temp++;
+                }
+                
+                // 두개 이상이면 겹쳐진 것
+                // 세번 겹칠 수 있기에 >=로 표현
+                if (temp >= 2)
+                    answer++;
+            }
 
 
             return answer;
@@ -54,9 +78,10 @@ namespace code_test
 
         static void Main(string[] args)
         {
-            int x = 12;
+            int[,] a = { { 0, 5 }, { 3, 9 }, { 1, 10 }};
+            int b = 4;
 
-            Console.WriteLine(solution(x));
+            Console.WriteLine(solution(a));
         }
     }
 }
