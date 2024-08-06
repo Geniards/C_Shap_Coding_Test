@@ -11,8 +11,8 @@ namespace code_test.이해하기
         #region 분수의 덧셈 (최대 공약수(gcd), 최소공배수, 기약분수)
         //static int gcd(int a, int b)
         //{
-        //    int num1;
-        //    int num2;
+        //    int num1; //
+        //    int num2; //
         //    int temp;
 
         //    if (a < b)
@@ -22,16 +22,18 @@ namespace code_test.이해하기
         //    }
         //    else
         //    {
-        //        num1 = b;
-        //        num2 = a;
+        //        num1 = b;     // 8
+        //        num2 = a;     // 10
         //    }
 
         //    // 여기가 핵심이다.
-        //    while(num2 != 0)    // num1 > num2
-        //    {
-        //        temp = num1 % num2;
-        //        num1 = num2;
-        //        num2 = temp;
+        //    // 분모는 0이면 안된다.
+        //    while (num2 != 0)    // num1 > num2
+        //    {   
+        ////                  8    10                나머지     
+        //        temp = num1 % num2;  // 8          2      0
+        //        num1 = num2;         // 10         10     2
+        //        num2 = temp;         // 8          2      0
         //    }
 
         //    return num1;
@@ -41,13 +43,13 @@ namespace code_test.이해하기
         //static int[] solution(int numer1, int denom1, int numer2, int denom2)
         //{
         //    int[] answer = new int[2];
-        //    int GCD = gcd((numer1 * denom2 + numer2 * denom1), (denom1 * denom2));  
+        //    int GCD = gcd((numer1 * denom2 + numer2 * denom1), (denom1 * denom2));
         //    // 분자, 분모의 최대 공약수를 구한 후 기약분수(분모가 1인 분수)를 만든다.
         //    //int LCD = (denom1 * denom2) / GCD;    //최소 공약수
 
-
+        ////                 1    *  4     +    3   *    2
         //    answer[0] = (numer1 * denom2 + numer2 * denom1) / GCD;
-        //    answer[1] = (denom1 * denom2)/ GCD;
+        //    answer[1] = (denom1 * denom2) / GCD;
 
         //    return answer;
         //}
