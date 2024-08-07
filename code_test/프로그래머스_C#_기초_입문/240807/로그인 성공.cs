@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace code_test
+namespace code_test.프로그래머스_C__기초_입문._240807
 {
     #region 로그인 성공?
 
@@ -42,36 +42,24 @@ namespace code_test
      *      
      */
     #endregion
-
-    public class Program
+    public class 로그인_성공
     {
-
         static public string solution(string[] id_pw, string[,] db)
         {
             string answer = "";
-            Dictionary<string,string> myDictionary = new Dictionary<string, string>();
-            for(int i = 0; i < db.GetLength(0); i++)
+            Dictionary<string, string> myDictionary = new Dictionary<string, string>();
+            for (int i = 0; i < db.GetLength(0); i++)
             {
                 myDictionary.Add(db[i, 0], db[i, 1]);
             }
 
-            if(myDictionary.ContainsKey(id_pw[0]))
+            if (myDictionary.ContainsKey(id_pw[0]))
             {
                 if (myDictionary.ContainsValue(id_pw[1]) && id_pw[1] == myDictionary[id_pw[0]])
                     return answer = "login";
                 return answer = "wrong pw";
             }
-
-
             return answer = "fail";
-        }
-        static void Main(string[] args)
-        {
-            string[] a = { "meosseugi", "1234" };
-            string[,] b = { { "rardss", "123" }, { "yyoom", "1234" }, { "meosseugi", "1234" } };
-            int bs = 4;
-
-            Console.WriteLine(solution(a, b));
         }
     }
 }
