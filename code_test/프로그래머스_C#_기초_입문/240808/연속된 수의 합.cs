@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Numerics;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace code_test
+namespace code_test.프로그래머스_C__기초_입문._240808
 {
     #region 연속된 수의 합
     /*
@@ -31,10 +28,8 @@ namespace code_test
      *      
      */
     #endregion
-
-    public class Program
+    public class 연속된_수의_합
     {
-
         static public int[] solution(int num, int total)
         {
             int[] answer = new int[num];
@@ -43,7 +38,7 @@ namespace code_test
             int temp_num = total % num;
             int halflen = num / 2;
 
-            for (int i = 0; i <num;i++)
+            for (int i = 0; i < num; i++)
             {
 
                 answer[i] = temp - halflen;
@@ -54,19 +49,7 @@ namespace code_test
                 halflen--;
             }
 
-
-
-
-
             return answer;
-        }
-        static void Main(string[] args)
-        {
-            int a = 3;
-            int b = 12;
-            int c = 2;
-
-            Console.WriteLine(solution(a, b));
         }
     }
 }
