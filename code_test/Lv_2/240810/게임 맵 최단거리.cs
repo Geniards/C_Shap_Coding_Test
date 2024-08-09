@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Linq;
-using System.Numerics;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace code_test
+namespace code_test.Lv_2._240810
 {
     #region 게임 맵 최단거리(1844)
     /*
@@ -44,8 +39,7 @@ namespace code_test
      *      
      */
     #endregion
-
-    public class Program
+    public class 게임_맵_최단거리
     {
         static public int solution(int[,] maps)
         {
@@ -125,24 +119,6 @@ namespace code_test
                 return -1;
             }
             #endregion
-
-        }
-        static void Main(string[] args)
-        {
-
-            int[,] a =
-            {
-                { 1,0,1,1,1},
-                { 1,0,1,0,1},
-                { 1,0,1,1,1},
-                { 1,1,1,0,1},
-                { 0,0,0,0,1},
-
-            };
-            int b = 1;
-            int c = 2;
-
-            Console.WriteLine(solution(a));
 
         }
     }
