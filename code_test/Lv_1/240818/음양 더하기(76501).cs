@@ -28,7 +28,7 @@ namespace code_test.Lv_1._240818
      */
     #endregion
 
-    public class Program
+    public class 음양_더하기
     {
         static public int solution(int[] absolutes, bool[] signs)
         {
@@ -45,3 +45,4 @@ namespace code_test.Lv_1._240818
             return answer;
         }
     }
+}

@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Linq;
-using System.Numerics;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace code_test
+namespace code_test.Lv_1._240820
 {
     #region 핸드폰 번호 가리기(12948)
 
@@ -30,8 +25,7 @@ namespace code_test
      *      
      */
     #endregion
-
-    public class Program
+    public class 핸드폰_번호_가리기_12948_
     {
         static public string solution(string phone_number)
         {
@@ -45,15 +39,6 @@ namespace code_test
             sb.Append(phone_number.Skip(temp - 4).ToArray());
 
             return answer = sb.ToString();
-        }
-        static void Main(string[] args)
-        {
-
-
-            string a = "01033334444";
-            int b = 0;
-
-            Console.WriteLine(solution(a));
         }
     }
 }
