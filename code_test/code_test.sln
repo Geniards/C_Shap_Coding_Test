@@ -5,7 +5,9 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "code_test", "code_test.csproj", "{93A56182-45CD-4003-A2C3-5930D8FFE6D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "백준", "..\백준\백준.csproj", "{D76310A2-0282-4F31-8038-A75D17C42B59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "백준문제풀이", "..\백준\백준문제풀이.csproj", "{D76310A2-0282-4F31-8038-A75D17C42B59}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "백준", "백준", "{15892B46-545F-4052-9502-57AF2A7CCB71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +26,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D76310A2-0282-4F31-8038-A75D17C42B59} = {15892B46-545F-4052-9502-57AF2A7CCB71}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {51C0474C-F12A-4C6C-B2A2-1F55E9243E94}
