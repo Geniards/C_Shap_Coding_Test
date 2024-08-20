@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Linq;
-using System.Numerics;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace code_test
+namespace code_test.Lv_2._240820
 {
     #region 최솟값 만들기(12941)
 
@@ -44,8 +39,7 @@ namespace code_test
      *      
      */
     #endregion
-
-    public class Program
+    public class 최솟값_만들기_12941_
     {
         static public int solution(int[] A, int[] B)
         {
@@ -62,14 +56,6 @@ namespace code_test
 
 
             return answer;
-        }
-        static void Main(string[] args)
-        {
-            int[] a = { 1, 2 };
-            int[] b = { 3, 4 };
-            long c = 1;
-
-            Console.WriteLine(solution(a, b));
         }
     }
 }

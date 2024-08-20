@@ -1,8 +1,6 @@
-﻿using System.Text;
-
-namespace 백준
+﻿namespace 팰린드롬수_1259_
 {
-    public class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
@@ -24,7 +22,7 @@ namespace 백준
                 Array.Reverse(chars);
                 string str = new string(chars);
 
-                if(input == str)
+                if (input == str)
                     sb.Add("yes");
                 else
                     sb.Add("no");
