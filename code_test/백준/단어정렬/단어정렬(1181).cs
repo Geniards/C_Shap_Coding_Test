@@ -1,10 +1,14 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace 백준
+namespace code_test.백준.단어정렬
 {
-    public class Program
+    public class 단어정렬_1181_
     {
-        static void Main(string[] args)
+        static void solution(string[] args)
         {
             List<string> list = new List<string>();
             int num = int.Parse(Console.ReadLine());
@@ -13,7 +17,7 @@ namespace 백준
             {
                 string? input = Console.ReadLine();
                 num--;
-                
+
                 if (input == null)
                 {
                     throw new Exception();
