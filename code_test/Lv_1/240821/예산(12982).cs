@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Linq;
-using System.Numerics;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace code_test
+namespace code_test.Lv_1._240821
 {
     #region 예산(12982)
 
@@ -40,8 +35,7 @@ namespace code_test
      *      
      */
     #endregion
-
-    public class Program
+    public class 예산_12982_
     {
         static public int solution(int[] d, int budget)
         {
@@ -49,7 +43,7 @@ namespace code_test
 
             Array.Sort(d);
 
-            for(int i=0; i< d.Length;i++)
+            for (int i = 0; i < d.Length; i++)
             {
                 budget -= d[i];
 
@@ -59,14 +53,6 @@ namespace code_test
             }
 
             return answer;
-        }
-        static void Main(string[] args)
-        {
-            int[] a = { 1, 3, 2, 5, 4 };
-            int b = 9;
-            long c = 1;
-
-            Console.WriteLine(solution(a,b));
         }
     }
 }

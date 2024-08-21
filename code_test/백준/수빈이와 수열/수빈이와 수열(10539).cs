@@ -1,10 +1,14 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace 백준
+namespace code_test.백준.수빈이와_수열
 {
-    public class Program
+    public class 수빈이와_수열_10539_
     {
-        static void Main(string[] args)
+        static void solution(string[] args)
         {
             int answer = 0;
             string? input = Console.ReadLine();
