@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Linq;
-using System.Numerics;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
-namespace code_test
+namespace code_test.Lv_1._240822
 {
     #region 삼총사(131705)
 
@@ -39,41 +33,7 @@ namespace code_test
      *      
      */
     #endregion
-
-    public class Program
+    public class 삼총사_131705_
     {
-        static int answer = 0;
-
-        static public int solution(int[] number)
-        {
-
-            dfs(0, 0, 0, number);
-
-            return answer;
-        }
-
-        static public void dfs(int idx, int depth, int sum, int[] number)
-        {
-            // 3번째 숫자까지 고를때 까지 
-            if(depth == 3)
-            {
-                if(sum == 0) answer++;
-                return;
-            }
-
-            for(int i = idx; i < number.Length; i++)
-            {
-                dfs(i+1, depth+1, sum + number[i], number);
-            }
-        }
-
-        static void Main(string[] args)
-        {
-            int[] a = { -2, 3, 0, 2, -5 };
-            string b = "7";
-            long c = 1;
-
-            Console.WriteLine(solution(a));
-        }
     }
 }

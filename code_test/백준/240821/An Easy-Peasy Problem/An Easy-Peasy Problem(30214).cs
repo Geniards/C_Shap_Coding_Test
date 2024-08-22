@@ -35,3 +35,4 @@ namespace code_test.백준.An_Easy_Peasy_Problem
 
         }
     }
+}

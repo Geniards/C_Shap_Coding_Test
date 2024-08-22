@@ -15,27 +15,25 @@ namespace 백준
 
             int num = int.Parse(input);
 
-            input = Console.ReadLine();
-
-            string[] inputs = input.Split(" ");
-            int[] ints = new int[num];
-            int[] B = new int[num];
-
+            List<Tuple<int, string>> list = new List<Tuple<int, string>>();
 
             for (int i = 0; i < num; i++)
             {
-                ints[i] = int.Parse(inputs[i]);
+                input = Console.ReadLine();
+                string[] inputs = input.Split(" ");
+
+                int value = int.Parse(inputs[0]);
+                string name = inputs[1];
+
+                list.Add(new Tuple<int, string>(value, name));
             }
 
-            for (int i = 0; i < num; i++)
+            var newList = list.OrderBy(x => x.Item1);
+
+            foreach (var item in newList)
             {
-                B[i] = ints[i] * (i + 1) - answer;
-                answer += B[i];
+                Console.WriteLine($"{item.Item1} {item.Item2}");
             }
-
-            foreach (int i in B)
-                Console.Write($"{i} ");
-
         }
     }
 }

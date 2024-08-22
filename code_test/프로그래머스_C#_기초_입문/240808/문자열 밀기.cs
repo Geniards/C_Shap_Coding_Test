@@ -32,9 +32,9 @@ namespace code_test.프로그래머스_C__기초_입문._240808
     #endregion
     public class 문자열_밀기
     {
-        static public int solution(string A, string B)
+        static public int solutions(string A, string B)
         {
-            #region 내풀이
+            #region 내풀이s
             int answer = 0;
             int temp = A.Length;
 
