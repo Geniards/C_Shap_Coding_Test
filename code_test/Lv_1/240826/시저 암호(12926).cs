@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Linq;
-using System.Numerics;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
-namespace code_test
+namespace code_test.Lv_1._240826
 {
     #region 시저 암호(12926)
 
@@ -37,10 +31,9 @@ namespace code_test
      *      
      */
     #endregion
-
-    public class Program
+    public class 시저_암호_12926_
     {
-        static public string solution(string s, int n)
+        public string solution(string s, int n)
         {
             // 65-90 A-Z
             // 97-122 a-z
@@ -54,9 +47,9 @@ namespace code_test
                 {
                     chars[i] = (char)(96 + n);
                 }
-                else if((int)chars[i] < 122 && (int)chars[i] > 96)
+                else if ((int)chars[i] < 122 && (int)chars[i] > 96)
                 {
-                    if((int)(chars[i] + n) > 122)
+                    if ((int)(chars[i] + n) > 122)
                     {
                         chars[i] = ((char)(96 + (chars[i] + n - 122)));
                     }
@@ -65,7 +58,7 @@ namespace code_test
                 }
                 else if ((int)chars[i] == 90)
                 {
-                    chars[i] = ((char)(64 + n)); 
+                    chars[i] = ((char)(64 + n));
                 }
                 else if ((int)chars[i] < 90 && (int)chars[i] > 64)
                 {
@@ -80,14 +73,6 @@ namespace code_test
             }
 
             return answer = new string(chars);
-        }
-        static void Main(string[] args)
-        {
-            string a = "a B z";
-            int b = 4;
-            long c = 1;
-
-            Console.WriteLine(solution(a,b));
         }
     }
 }
