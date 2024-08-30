@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Linq;
-using System.Numerics;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
-namespace code_test
+namespace code_test.Lv_1._240830
 {
     #region 가장 가까운 같은 글자(142086)
 
@@ -45,8 +39,7 @@ namespace code_test
      *      
      */
     #endregion
-
-    public class Program
+    public class 가장_가까운_같은_글자_142086_
     {
         static public int[] solution(string s)
         {
@@ -71,14 +64,6 @@ namespace code_test
                 Console.WriteLine(v);
 
             return answer;
-        }
-        static void Main(string[] args)
-        {
-            string a = "aaaaaa";
-            int b = 4;
-            long c = 1;
-
-            Console.WriteLine(solution(a));
         }
     }
 }
