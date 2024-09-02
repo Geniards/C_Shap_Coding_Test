@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Linq;
-using System.Numerics;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
-namespace code_test
+namespace code_test.Lv_1._240902
 {
     #region 콜라 문제(132267)
 
@@ -65,13 +59,12 @@ namespace code_test
      *      
      */
     #endregion
-
-    public class Program
+    public class 콜라_문제_132267_
     {
         static public int solution(int a, int b, int n)
         {
             int answer = 0;
-            
+
             while (true)
             {
                 int sum = 0;
@@ -79,9 +72,9 @@ namespace code_test
 
                 take = b * (n / a);
                 sum = take + (n % a);
-                
+
                 n /= a;
-                
+
                 answer += take;
 
                 if (sum < a)
@@ -91,14 +84,6 @@ namespace code_test
             }
 
             return answer;
-        }
-        static void Main(string[] args)
-        {
-            int a = 3;
-            int b = 1;
-            int c = 20;
-
-            Console.WriteLine(solution(a,b,c));
         }
     }
 }
