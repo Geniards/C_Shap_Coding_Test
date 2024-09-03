@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Linq;
-using System.Numerics;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
-namespace code_test
+namespace code_test.Lv_1._240903
 {
     #region 추억 점수(176963)
 
@@ -57,8 +51,7 @@ namespace code_test
      *      
      */
     #endregion
-
-    public class Program
+    public class 추억_점수_176963_
     {
         static public int[] solution(int k, int[] score)
         {
@@ -69,7 +62,7 @@ namespace code_test
                 list.Add(score[i]);
                 list.Sort();
                 list.Reverse();
-                if(k > list.Count)
+                if (k > list.Count)
                 {
                     answer[i] = list.Last();
                 }
@@ -81,14 +74,6 @@ namespace code_test
 
 
             return answer;
-        }
-        static void Main(string[] args)
-        {
-            int a = 3;
-            int[] b = { 10, 100, 20, 150, 1, 100, 200 };
-            int c = 20;
-
-            Console.WriteLine(solution(a,b));
         }
     }
 }
